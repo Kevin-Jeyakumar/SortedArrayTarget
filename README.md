@@ -1,0 +1,2 @@
+Given a sorted integer array, which might have duplicated values, and also given a target integer number, find the first appearance of the target value in the array, return the index of the first appearance. If the target value can't be found, return -1. 
+example: given array [2,3,4,4,4,5,5,5,6,7,8,8,8,9], given target number 4, expected return is 2. Given same array, given target number 6, expected return is 8. Given same array, given target number 0, expected return is -1.
