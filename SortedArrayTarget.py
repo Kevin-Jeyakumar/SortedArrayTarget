@@ -6,14 +6,14 @@ def finding_target(nums, target):
     r = len(nums)-1
     while l < r:
         print(f"l: {l}, r: {r}")
-        if target > nums[(r-l)//2]:
+        if target > nums[((r-l)//2) + l]:
             print("taking right window")
-            l = ((r-l)//2)+1
-        elif target < nums[(r-l)//2]:
+            l = ((r-l)//2) + l + 1
+        elif target < nums[((r-l)//2) + l]:
             print("taking left window")
-            r = ((r-l)//2)-1
+            r = ((r-l)//2) + l - 1
         else:
-            r = ((r-l)//2)
+            r = (((r-l)//2) + l)
             # if nums[l] < target:
             #     l += 1
             # if nums[r] > target:
