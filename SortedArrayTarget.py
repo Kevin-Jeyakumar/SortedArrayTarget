@@ -24,5 +24,7 @@ def finding_target(nums, target):
     else:
         return -1
 
+sortedArrayString = input("Enter comma seperated list of integers: ")
+sortedArray = sorted([int(x) for x in sortedArrayString.split(",")])
 target = input("Enter target: ")
-print(finding_target([2,3,4,4,4,5,5,5,6,7,8,8,8,9], int(target)))
+print(finding_target(sortedArray, int(target)))
