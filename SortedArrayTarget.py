@@ -7,8 +7,10 @@ def finding_target(nums, target):
     while l < r:
         print(f"l: {l}, r: {r}")
         if target > nums[(r-l)//2]:
+            print("taking right window")
             l = ((r-l)//2)+1
         elif target < nums[(r-l)//2]:
+            print("taking left window")
             r = ((r-l)//2)-1
         else:
             r = ((r-l)//2)
@@ -21,4 +23,5 @@ def finding_target(nums, target):
     else:
         return -1
 
-print(finding_target([2,3,4,4,4,5,5,5,6,7,8,8,8,9], 4))
+target = input("Enter target: ")
+print(finding_target([2,3,4,4,4,5,5,5,6,7,8,8,8,9], int(target)))
